@@ -1,3 +1,4 @@
-All Cops
+AllCops
    Exclude:
       -Guardfile
+
