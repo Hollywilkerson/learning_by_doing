@@ -1,4 +1,4 @@
-#!/usr/bin/ env ruby
+#!/usr/bin/env ruby
 
 practice = 'this is a string to practice with'
 puts practice
