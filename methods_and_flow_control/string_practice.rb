@@ -7,4 +7,5 @@ puts practice.upcase
 puts practice.capitalize.sub('string', "'string'")
 puts "The string '#{practice}' has #{practice.length} characters"
 puts practice.reverse
-puts 'practice " * 2 + "practice!'
+puts "practice " * 2 + "practice!"
+
