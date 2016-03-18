@@ -1,0 +1,3 @@
+AllCops:
+  Exclude:
+    -  'Guard-file'
