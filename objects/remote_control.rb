@@ -1,7 +1,11 @@
+#!/usr/bin/env ruby
+
 # This is a RemoteControl Class
 class RemoteControl
-  def initialize(volume)
-    @volume = volume
+  attr_reader :volume
+
+  def initialize
+    @volume = 0 +rand(60)
   end
 
   def volume_up(number)
@@ -27,7 +31,7 @@ class RemoteControl
   def menu
     @menu = [Contrast, Brightness, Sharpness]
     menu.each do |menu|
-  end
+    end
   end
 
 remote_control = RemoteControl.new(4)
