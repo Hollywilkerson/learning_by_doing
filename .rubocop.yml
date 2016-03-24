@@ -3,7 +3,3 @@ AllCops:
     - 'Guardfile'
     - 'homework_tester/**/*'
 
-
-
-=======
->>>>>>> initial setup for rubocop and guard
