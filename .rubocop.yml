@@ -3,3 +3,5 @@ AllCops:
     - 'Guardfile'
     - 'homework_tester/**/*'
 
+
+
