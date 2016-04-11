@@ -1,40 +1,39 @@
+# CashRegister is a class that will use methods
+# like a real cash register.
 class CashRegister
-  def initialize(purchase,total,pay,change,)
+  def initialize
+    @total = 0.0
+  end
 
-    @purchase = purchase
-    @total = total
-    @pay = pay
-    @change = change
+  def purchase(cost)
+    @total += cost
+  end
 
-    def total
-      @var = 0.0
+  def total
+    "$#{currency(@total)}"
+  end
+
+  def pay(tender)
+    total_left = @total - tender
+    if total_left > 0
+      @total -= tender
+      puts "Your new total is $#{currency(@total)}."
+    else
+      change = tender - @total
+      puts "Your change is $#{currency(change)}."
+      @total = 0.0
     end
+  end
 
-    def purchase(cost)
-      @total += cost
-    end
+  def currency(number)
 
-    def total
-      "$#{currency(@total)}"
-    end
+    currency = number.round(2)
 
-    def pay(tender)
-      total_left = @total - tender
-      if total_left > 0
-        @total -= tender
-        puts "Your new total is $#{currency(@total)}."
-      else
-        change = tender - @total
-        puts "Your change is $#{currency(change)}."
-        @total = 0.0
-
-      end
-    end
-
-    def change
-      @pay - @purchase
-
+    test = currency.to_s.split('.').last
+    if test.length == 1
+      currency.to_s + '0'
+    else
+      currency
     end
   end
 end
-
