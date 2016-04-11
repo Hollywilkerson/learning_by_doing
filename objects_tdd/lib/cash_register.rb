@@ -1,7 +1,6 @@
-# This is a CashRegister class
+# Creating CashRegister class
 class CashRegister
-  attr_reader :total, :change
-
+  attr_reader :total
   def initialize
     @total = 0.00
   end
@@ -10,17 +9,16 @@ class CashRegister
     @total += amount
   end
 
-  def pay(amount)
-    if amount > @total
-      @change = amount - @total
+  def payment(amount)
+    @total -= amount
+    if @total < 0
+      change = @total.abs
       @total = 0.00
-      puts "Your change is $#{@change}."
+      "Your change is $#{format('%.2f', change)}"
+    elsif @total > 0
+      "You owe $#{format('%.2f', total)}"
     else
-      @total -= amount
+      total
     end
-  end
-
-  def change
-    @change.round(2)
   end
 end
