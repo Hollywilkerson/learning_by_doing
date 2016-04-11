@@ -1,19 +1,13 @@
 #!/usr/bin/env ruby
 
-def verse(number)
-  if number == 1
-    puts "#{number} bottle of beer on the wall, #{number} bottle of beer."
-    puts "Take one down and pass it around, no more bottles of beer on the wall."
-  elsif number >1
-    puts "#{number} bottles of beer on the wall, #{number} bottles of beer."
-    puts "Take one down and pass it around, #{number} bottles of beer on the wall."
+def beer_string(beer_quantity, bottles = 'bottles', bottle = 'bottles')
+  if beer_quantity > 0
+    puts "#{beer_quantity} #{bottles} of beer on the wall,"\
+    " #{beer_quantity} #{bottles} of beer.\n"\
+    "Take one down and pass it around, #{beer_quantity - 1} #{bottle}"\
+    " of beer on the wall.\n"\
+    "\n"
   else
-    puts "No more bottles of beer on the wall, no more bottles of beer."
-    puts "Go to the store and buy some more, 99 bottles of beer on the wall. "
+    no_beer_string
   end
-end
-
-(99).downto (1) do |number|
-  verse(number)
-
 end
