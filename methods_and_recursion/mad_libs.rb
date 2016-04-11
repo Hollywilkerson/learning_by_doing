@@ -26,8 +26,10 @@ var18 = ask_question 'Give me a number.'
 var19 = ask_question 'Give me another plural noun. '
 
 mad_lib = <<mad_lib
-A vacation is when you take a trip to some #{var1} place with your #{var2} family.
-Usually you go to some place that is near a/an #{var3} or up on a/an #{var4}.
+A vacation is when you take a trip to some #{var1} place/
+with your #{var2} family.
+Usually you go to some place/that is near a/an #{var3}/
+or up on a/an #{var4}.
 A good vacation place is one where you can ride #{var5} or play #{var6} or  \
 go hunting for #{var7}.
 I like to spend my time #{var8} or #{var9}.
